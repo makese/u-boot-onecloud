@@ -114,7 +114,7 @@ jobs:
 
       - name: Release
         run: |
-          time="${{ github.event.head_commit.timestamp }}"
+          time="${{ github.event.head_commit.timestamp }}" 
           sha="${GITHUB_SHA:0:8}"
           tag="build-$(date +'%Y%m%d-%H%M' -d "$time")"
           message="Auto-Build $(date +'%Y-%m-%d %H:%M' -d "$time")"
